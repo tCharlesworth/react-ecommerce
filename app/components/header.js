@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router';
+import { Link } from 'react-router';
 
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class HeaderComponent extends React.Component {
             <div>
                 <nav>
                     <ul className="header-links">
-                        <li><Link to ="/">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                     </ul>
                     <div className="header-hamburger" onClick={ this.toggleDrawer.bind(this) }>
                         <i className="fa fa-bars fa-2x"></i>
@@ -27,7 +27,7 @@ class HeaderComponent extends React.Component {
                         <h1>e-commerce</h1>
                     </div>
                     <div className="clearfix" />
-                    <ul className={"header-drawer drawer "+this.state.drawer}>
+                    <ul className={ "header-drawer drawer "+this.state.drawer } >
                         <li><Link to="/" onClick={ this.toggleDrawer.bind(this) }>Home</Link></li>
                     </ul>
                 </nav>
