@@ -15,7 +15,7 @@ class HeaderComponent extends React.Component {
     }
     render() {
         return (
-            <div>
+            <header>
                 <nav>
                     <ul className="header-links">
                         <li><Link to="/">Home</Link></li>
@@ -31,7 +31,7 @@ class HeaderComponent extends React.Component {
                         <li><Link to="/" onClick={ this.toggleDrawer.bind(this) }>Home</Link></li>
                     </ul>
                 </nav>
-            </div>
+            </header>
         )
     }
 }
