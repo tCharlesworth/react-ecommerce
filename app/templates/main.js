@@ -1,12 +1,14 @@
 import React from 'react';
 
 import ReactCssTransitionGroup from 'react-addons-css-transition-group';
+import HeaderComponent from '../components/header.js'
 
 class MainTemplate extends React.Component {
   render() {
     return (
       <div>
         <div className="app-wrapper">
+          <HeaderComponent />
           <ReactCssTransitionGroup
             transitionName="appear"
             transitionEnterTimeout={500}
