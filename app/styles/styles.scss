@@ -1,2 +1,309 @@
-@import 'bits'
+@import 'bits';
 
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #F4F4F4;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-text;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: medium;
+  display: inline;
+  background: $color-green-primary;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $color-green-light;
+}
+.btn-block {
+  width: 100%;
+}
+.wrapper {
+  width: 60%;
+  margin: auto;
+}
+.wrapper-wide {
+  width: 80%;
+  margin: auto;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.container-fluid {
+  display: inline-block;
+  margin: 10px !important;
+  width: 250px;
+}
+.paragraph {
+  text-align: center;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.middle {
+  margin: auto;
+}
+.clearfix {
+  clear: both;
+}
+.half {
+  width: 50%;
+}
+.hori-half {
+  width: 50vw;
+}
+.vert-half {
+  height: 30vh;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.majority {
+  width: 66%;
+  display: inline-block;
+}
+.third {
+  width: 33%;
+  display: inline-block;
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: #fff;
+}
+.link-white {
+  color: #fff;
+}
+.link-white:visited {
+  color: #fff;
+}
+.link-white:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.text-blue {
+  color: $color-blue;
+}
+.bg-white {
+  background-color: #fff;
+}
+.cursor-hover:hover {
+  cursor: pointer;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+.img-max-height {
+  max-height: 250px;
+  width: auto;
+}
+
+input[type="text"],input[type="password"],input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  margin: 10px 0;
+}
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+a:visited {
+  color: $color-text;
+}
+a:hover {
+  color: $color-blue;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+.drawer-open {
+  max-height: 100vh;
+}
+.appear-enter {
+  transition-duration: 0.7s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+}
+.appear-enter.appear-enter-active {
+  opacity: 1;
+}
+.appear-leave {
+  opacity: 0;
+}
+.inline {
+  display: inline-block;
+}
+/* Default Size */
+header {
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+
+  .header-title {
+    margin: auto;
+    width: 250px;
+    font-size: medium;
+    padding-top: 15px;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  .header-links {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    li {
+      display: inline;
+      padding: 0 5px;
+    }
+  }
+  .header-hamburger {
+    margin: 20px 0;
+    display: none;
+    cursor: pointer;
+  }
+  .header-drawer {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    div {
+      border-top: thin solid grey;
+      padding: 5px 10px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:visited {
+      color: black;
+    }
+    a:hover {
+      color: $color-green-dark;
+    }
+  }
+  .header-actions {
+    float: right;
+    padding-top: 10px;
+  }
+}
+.big-text {
+  font-size: 4em;
+}
+.medium-text {
+  font-size: 2.2em;
+}
+.page-padding {
+  padding-top: 30vh;
+}
+.page-padding-half {
+  padding-top: 10vh;
+}
+.social-box {
+  background: #fff;
+  padding: 10px;
+  bottom: 10vh;
+  position: fixed;
+}
+.projects {
+  .container, .container-fluid {
+    margin: 60px auto;
+    .project-header {
+      font-size: 1em;
+      i {
+        margin-top: 8px;
+        margin-right: 8px;
+      }
+    }
+    h3 {
+      font-style: italic;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+}
+
+// End Default Size
+
+/* Tablet Size */
+@media (max-width: 600px) {
+  header {
+    .header-links {
+      display: none;
+    }
+    .header-actions {
+      display: none;
+    }
+    .header-hamburger {
+      display: block;
+      float: right;
+    }
+    .header-drawer {
+      display: block;
+    }
+  }
+
+  .third {
+    width: 100%;
+    display: block;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .half {
+    width: 100%;
+    display: block;
+  }
+}
+/* Mobile Size */
+@media (max-width: 400px) {
+}
