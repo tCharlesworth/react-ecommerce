@@ -5,9 +5,8 @@
 
 const Keys = require('./keys.js');
 
-const Config = {
+module.exports = {
   ENV: Keys.ENV || 'DEVELOPMENT',
-  port: Keys.port || 3001
+  port: Keys.port || 3001,
+  mongoURI: Keys.mongoURI
 };
-
-module.exports = Config;

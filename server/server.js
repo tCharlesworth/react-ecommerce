@@ -3,7 +3,7 @@
 ///
 
 // Load Libraries
-const Hapi   = require('Hapi');
+const Hapi   = require('hapi');
 
 
 // Load Configurations
@@ -24,6 +24,9 @@ require('./auth.js')(server);
 
 // Load routes
 require('./routes.js')(server);
+
+// Load the database
+require('./database.js')(server, config);
 
 // Start the Server
 server.start((err) => {

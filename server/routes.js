@@ -17,6 +17,6 @@ module.exports = (server) => {
   server.route({
     method: 'POST',
     path: '/api/user',
-    handler: userCtrl.register
+    handler: userCtrl.createUser
   });
 };
