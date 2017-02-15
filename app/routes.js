@@ -6,6 +6,8 @@ import MainTemplate from './templates/main.js';
 // Route Views
 import HomeView     from './views/home.js';
 import ProductsView from './views/products.js';
+import LoginView    from './views/login.js';
+import RegisterView from './views/register.js';
 
 // Route Config
 var routes = (
@@ -13,6 +15,8 @@ var routes = (
         <Route path="/" component={MainTemplate}>
             <IndexRoute component={HomeView} />
             <Route path="/products" component={ProductsView} />
+            <Route path="/login"    component={LoginView} />
+            <Route path="/register" component={RegisterView} />
         </Route>
     </Router>
 );

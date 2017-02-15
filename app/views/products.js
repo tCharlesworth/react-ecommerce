@@ -17,7 +17,7 @@ class ProductsView extends React.Component {
   componentWillMount() {
     // Load Data
     publicUtils.getProducts().then((data) => {
-      this.setState({ products: data });
+      this.setState({ products: data || [] });
     });
   }
   render() {

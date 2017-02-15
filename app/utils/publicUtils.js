@@ -2,10 +2,10 @@ import axios from 'axios';
 
 let publicUtils = {
   getProducts() {
-    return axios.get('http://localhost:3001/products').then((response) => {
+    return axios.get('http://localhost:3001/api/products').then((response) => {
       return response.data;
     }).catch((err) => {
-      console.warn('Unable to retrieve products.')
+      console.warn('Unable to retrieve products.');
     });
   }
 };

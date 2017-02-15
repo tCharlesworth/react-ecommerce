@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+// Components
+import HeaderAuth from './headerAuth.js';
+
 class HeaderComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -21,6 +24,7 @@ class HeaderComponent extends React.Component {
                         <ul className="header-links">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/products">Products</Link></li>
+                            <HeaderAuth />
                         </ul>
                         <div className="header-hamburger" onClick={ this.toggleDrawer.bind(this) }>
                             <i className="fa fa-bars fa-2x"></i>

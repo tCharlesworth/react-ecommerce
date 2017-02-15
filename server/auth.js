@@ -2,22 +2,20 @@
 const BCrypt = require('bcrypt'),
       Basic  = require('hapi-auth-basic');
 
-module.exports = (server) => {
-  // Serialize takes a user and explicitly defines properties to include.
-  const serializeUser = (user) => {
-    return {name:  user.name, id: user.id };
-  }
+const authCtrl = require('./controllers/authCtrl.js');
 
+module.exports = (server) => {
   // Function to detrmine if user is authentic
   const validate = (request, uname, pword, cb) => {
-    let user = null;
+    let user = authCtrl.validateUser(uname, pword);
     if(!user) {
-      return cb(null, false)
+      return cb(null, false);
     }
 
-    // Compare PWORD HERE
+    // Compare PWORD HERE?
+    console.log('run bcrypt')
     BCrypt.compare(pword, user.hashedPassword, (err, isValid) => {
-      cb(err, isValid, serializeUser(user) )
+      cb(err, isValid, authCtrl.serializeUser(user) );
     });
   }
 
@@ -28,6 +26,6 @@ module.exports = (server) => {
     }
 
     server.auth.strategy('simple', 'basic', { validateFunc: validate });
-  })
+  });
 
 };
