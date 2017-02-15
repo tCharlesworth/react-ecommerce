@@ -5,7 +5,9 @@ let productSchema = mongoose.Schema({
     price: {type: Number},
     images: {type: [String]},
     defaultImage: {type: String},
-    description: {type: String}
+    description: {type: String},
+    productType: {type: String},
+    productSize: {type: String}
 });
 
 module.exports = mongoose.model('User', productSchema);
