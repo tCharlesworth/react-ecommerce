@@ -5,6 +5,7 @@ import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 import MainTemplate from './templates/main.js';
 // Route Views
 import HomeView     from './views/home.js';
+import ProductView  from './views/product.js';
 import ProductsView from './views/products.js';
 import LoginView    from './views/login.js';
 import RegisterView from './views/register.js';
@@ -15,6 +16,7 @@ var routes = (
         <Route path="/" component={MainTemplate}>
             <IndexRoute component={HomeView} />
             <Route path="/products" component={ProductsView} />
+            <Route path="/products/:productId" component={ProductView} />
             <Route path="/login"    component={LoginView} />
             <Route path="/register" component={RegisterView} />
         </Route>
