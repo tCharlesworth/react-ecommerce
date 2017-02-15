@@ -1,6 +1,8 @@
+let UserModel = require('mongoose').model('User');
+
 module.exports = {
-    createUser(username, password) {
-        // If username available create user
-        return {};
+    createUser(request, reply) {
+        console.log('request: ', request);
+        reply('OK');
     }
 };

@@ -19,14 +19,14 @@ server.connection({
   }
 });
 
+// Load the database
+require('./database.js')(server, config);
+
 // Load basic auth
 require('./auth.js')(server);
 
 // Load routes
 require('./routes.js')(server);
-
-// Load the database
-require('./database.js')(server, config);
 
 // Start the Server
 server.start((err) => {
