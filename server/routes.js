@@ -6,6 +6,6 @@ module.exports = (server) => {
   server.route({
     method: 'GET',
     path: '/products',
-    handler: productsCtrl.getProducts()
+    handler: productsCtrl.getProducts
   })
 };
