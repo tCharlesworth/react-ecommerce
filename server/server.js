@@ -10,7 +10,13 @@ const config = require('./config/config.js');
 
 // Create Server
 const server = new Hapi.Server();
-server.connection({ port: config.port, host: 'localhost' });
+server.connection({ 
+  port: config.port, 
+  host: 'localhost' ,
+  routes: {
+    cors: config.ENV != 'PRODUCTION'
+  }
+});
 
 // Load routes
 require('./routes.js')(server);

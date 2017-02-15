@@ -13,7 +13,9 @@ class MainTemplate extends React.Component {
             transitionName="appear"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}>
-              {React.cloneElement(this.props.children, {key: this.props.location.pathname})}
+              <div className="wrapper middle">
+                {React.cloneElement(this.props.children, {key: this.props.location.pathname})}
+              </div>
             </ReactCssTransitionGroup>
         </div>
       </div>

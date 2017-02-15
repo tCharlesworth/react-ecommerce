@@ -246,30 +246,21 @@ header {
 .page-padding-half {
   padding-top: 10vh;
 }
-.social-box {
-  background: #fff;
-  padding: 10px;
-  bottom: 10vh;
-  position: fixed;
+.page-title {
+  margin-top: 40px;
+  font-size: 2em;
 }
-.projects {
-  .container, .container-fluid {
-    margin: 60px auto;
-    .project-header {
-      font-size: 1em;
-      i {
-        margin-top: 8px;
-        margin-right: 8px;
-      }
-    }
-    h3 {
-      font-style: italic;
-      padding: 5px;
-      margin: 0;
-    }
+.product-box {
+  width: 200px;
+  background: #fff;
+  img {
+    width: 100%;
+    max-height: 150px;
+  }
+  .product-info {
+    padding: 10px;
   }
 }
-
 // End Default Size
 
 /* Tablet Size */
