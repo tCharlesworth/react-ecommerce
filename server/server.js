@@ -3,7 +3,8 @@
 ///
 
 // Load Libraries
-const Hapi = require('Hapi');
+const Hapi   = require('Hapi');
+
 
 // Load Configurations
 const config = require('./config/config.js');
@@ -17,6 +18,9 @@ server.connection({
     cors: config.ENV != 'PRODUCTION'
   }
 });
+
+// Load basic auth
+require('./auth.js')(server);
 
 // Load routes
 require('./routes.js')(server);
