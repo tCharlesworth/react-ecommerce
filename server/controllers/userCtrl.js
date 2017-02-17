@@ -6,9 +6,8 @@ module.exports = {
         console.log('request: ', request.payload);
         BcryptHelper.hash(request.payload.password, (err, hash) => {
             if(err) {
-                reply("Error hashing password").code(500);
+                reply('Error hashing password').code(500);
             } else {
-                console.log("HASHED!");
                 // Create the user
                 UserModel.create({
                     email:      request.payload.email,
@@ -17,7 +16,7 @@ module.exports = {
                 }, (err, user) => {
                     if(err) {
                         console.warn(err);
-                        reply({msg: "Failed to create user", code: err.code}).code(500);
+                        reply({msg: 'Failed to create user', code: err.code}).code(500);
                     } else {
                         console.log('created new user');
                         reply(user.serializeUser());
