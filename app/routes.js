@@ -20,7 +20,7 @@ var routes = (
             <Route path="/products/:productId" component={ProductView} />
             <Route path="/login"    component={LoginView} />
             <Route path="/register" component={RegisterView} />
-            <Route path="/admin" component={AdminView} />
+            <Route path="/admin"    component={AdminView} />
         </Route>
     </Router>
 );

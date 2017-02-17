@@ -10,4 +10,4 @@ let productSchema = mongoose.Schema({
     productSize: {type: String}
 });
 
-module.exports = mongoose.model('User', productSchema);
+module.exports = mongoose.model('Product', productSchema);
