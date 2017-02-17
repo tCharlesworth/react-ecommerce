@@ -13,6 +13,12 @@ module.exports = (server) => {
     handler: productsCtrl.getProducts
   });
 
+  server.route({
+    method: 'GET',
+    path: '/api/product/{productId?}',
+    handler: productsCtrl.getProduct
+  });
+
   // User Routes
   server.route({
     method: 'POST',

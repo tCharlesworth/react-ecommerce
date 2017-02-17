@@ -15,6 +15,12 @@ let publicUtils = {
     return axios.post(URL+'/api/user', data).then((response) => {
       return response.data;
     });
+  },
+
+  getProduct(productId) {
+    return axios.get(URL+'/api/product/'+productId).then((response) => {
+      return response.data;
+    });
   }
 };
 
