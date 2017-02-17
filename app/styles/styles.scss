@@ -276,6 +276,20 @@ header {
 .hidden {
   display: none;
 }
+.carousel {
+  .carousel-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .carousel-selector {
+    width: 10px;
+    border: thin solid $color-blue;
+    border-radius: 50%;
+    background-color: $color-blue;
+  }
+}
 // End Default Size
 
 /* Tablet Size */

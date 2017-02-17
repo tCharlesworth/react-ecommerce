@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PageTitle from '../components/pageTitle.js';
+import CarouselComponent from '../components/carousel.js';
 
 import PublicUtils from '../utils/publicUtils.js';
 
@@ -25,6 +26,7 @@ class ProductView extends React.Component {
             <div>
                 <PageTitle text={ this.state.product.name || "No Name" } />
                 <hr />
+                <CarouselComponent images={this.state.images} />
                 <p>Price: {this.state.product.price}</p>
                 <p>Description: {this.state.product.description}</p>
             </div>
