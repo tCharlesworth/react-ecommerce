@@ -9,6 +9,7 @@ import ProductView  from './views/product.js';
 import ProductsView from './views/products.js';
 import LoginView    from './views/login.js';
 import RegisterView from './views/register.js';
+import AdminView    from './views/admin.js';
 
 // Route Config
 var routes = (
@@ -19,6 +20,7 @@ var routes = (
             <Route path="/products/:productId" component={ProductView} />
             <Route path="/login"    component={LoginView} />
             <Route path="/register" component={RegisterView} />
+            <Route path="/admin" component={AdminView} />
         </Route>
     </Router>
 );

@@ -19,4 +19,17 @@ module.exports = (server) => {
     path: '/api/user',
     handler: userCtrl.createUser
   });
+
+  // Admin Routes
+  server.route({
+    method: 'GET',
+    path: '/admin/users',
+    handler: userCtrl.getAllUsers
+  });
+
+  server.route({
+    method: 'DELETE',
+    path: '/admin/user/{userId?}',
+    handler: userCtrl.removeUser
+  });
 };

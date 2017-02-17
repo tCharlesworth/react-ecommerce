@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 // Load models
-let UserModel       = require('./models/user.js'),
-    UserPreferences = require('./models/userPreferences.js');
+let UserModel       = require('./models/user.js');
 
 module.exports = (server, config) => {
     mongoose.connect(config.mongoURI);

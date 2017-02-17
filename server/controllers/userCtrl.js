@@ -25,5 +25,28 @@ module.exports = {
                 });
             }
         });
+    },
+
+    getAllUsers(request, reply) {
+        UserModel.find().exec((err, results) => {
+            if(err) {
+                console.warn(err);
+                reply({msg: "Could not load users from database", code: err.code});
+            } else {
+                reply(results);
+            }
+        });
+    },
+
+    removeUser(request, reply) {
+        console.log('Removing user: ', request.params.userId);
+        UserModel.remove({_id: request.params.userId}).exec((err) => {
+            if(err) {
+                console.log('Could not remove user', err);
+                reply({msg: 'Could not remove user', code: err.code});
+            } else {
+                reply('OK');
+            }
+        });
     }
 };

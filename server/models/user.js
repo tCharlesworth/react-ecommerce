@@ -9,7 +9,7 @@ let userSchema = mongoose.Schema({
 });
 
 userSchema.methods.serializeUser = () => {
-    return { name: this.name, id: this.id };
+    return { email: this.email, id: this.id };
 };
 
 module.exports = mongoose.model('User', userSchema);

@@ -24,6 +24,7 @@ class HeaderComponent extends React.Component {
                         <ul className="header-links">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/products">Products</Link></li>
+                            <li><Link to="/admin">Admin</Link></li>
                             <HeaderAuth />
                         </ul>
                         <div className="header-hamburger" onClick={ this.toggleDrawer.bind(this) }>

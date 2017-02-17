@@ -264,6 +264,10 @@ header {
     padding: 10px;
   }
 }
+.deleteable:hover {
+  cursor: pointer;
+  color: $color-red-error;
+}
 // End Default Size
 
 /* Tablet Size */
