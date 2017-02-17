@@ -22,6 +22,9 @@ class AdminView extends React.Component {
           <h3>Products</h3>
           <ProductsTableComponent />
           <NewProductFormComponent />
+          <br/>
+          <br/>
+          <br/>
       </div>
     )
   }

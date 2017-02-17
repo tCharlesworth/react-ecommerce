@@ -27,25 +27,30 @@ class ProductsTableComponent extends React.Component {
   }
   render() {
     return (
-      <table>
-        <tbody>
-          <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>price</th>
-          </tr>
-          {this.state.products.map((product, idx) => {
-            return (
-              <tr key={idx}>
-                <td>{ product._id }</td>
-                <td>{ product.name }</td>
-                <td>{ product.price }</td>
-                <td><span className="deleteable" onClick={this.handleDelete.bind(this, product._id)}>X</span></td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <div>
+        <h4 className="text-center">Product List</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>price</th>
+              <th>images</th>
+            </tr>
+            {this.state.products.map((product, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>{ product._id }</td>
+                  <td>{ product.name }</td>
+                  <td>{ product.price }</td>
+                  <td>{ product.images.length }</td>
+                  <td><span className="deleteable" onClick={this.handleDelete.bind(this, product._id)}>X</span></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     )
   }
 }

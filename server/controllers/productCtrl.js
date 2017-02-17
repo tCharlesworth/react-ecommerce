@@ -27,7 +27,8 @@ module.exports = {
     ProductModel.create({
       name: request.payload.name,
       price: request.payload.price,
-      description: request.payload.description
+      description: request.payload.description,
+      images: request.payload.images
     }, (err, product) => {
       if(err) {
         console.warn('Could not create product');
