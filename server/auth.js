@@ -1,7 +1,7 @@
 // https://hapijs.com/tutorials/auth?lang=en_US
-const BCrypt = require('bcrypt'),
-      Basic  = require('hapi-auth-basic');
+const Basic  = require('hapi-auth-basic');
 
+const BcryptHelper = require('./helpers/bcryptHelper.js');
 const authCtrl = require('./controllers/authCtrl.js');
 
 module.exports = (server) => {
@@ -14,7 +14,7 @@ module.exports = (server) => {
 
     // Compare PWORD HERE?
     console.log('run bcrypt')
-    BCrypt.compare(pword, user.hashedPassword, (err, isValid) => {
+    BcryptHelper.compare(pword, user.hashedPassword, (err, isValid) => {
       cb(err, isValid, authCtrl.serializeUser(user) );
     });
   }

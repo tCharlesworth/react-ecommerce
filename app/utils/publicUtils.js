@@ -12,10 +12,8 @@ let publicUtils = {
   },
 
   createUser(data) {
-    return axios.post(URL+'/api/user').then((response) => {
+    return axios.post(URL+'/api/user', data).then((response) => {
       return response.data;
-    }).catch((err) => {
-      console.warn('Unable to register user');
     });
   }
 };
