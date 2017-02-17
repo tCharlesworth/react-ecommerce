@@ -10,5 +10,10 @@ module.exports = {
   },
   removeUser(userId) {
     return axios.delete(URL+"/admin/user/"+userId);
+  },
+  createProduct(data) {
+    return axios.post(URL+'/admin/products', data).then((response) => {
+      return response.data;
+    });
   }
 }

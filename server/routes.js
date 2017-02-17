@@ -32,4 +32,10 @@ module.exports = (server) => {
     path: '/admin/user/{userId?}',
     handler: userCtrl.removeUser
   });
+
+  server.route({
+    method: 'POST',
+    path: '/admin/products',
+    handler: productsCtrl.createProduct
+  });
 };
