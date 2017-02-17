@@ -38,4 +38,10 @@ module.exports = (server) => {
     path: '/admin/products',
     handler: productsCtrl.createProduct
   });
+
+  server.route({
+    method: 'DELETE',
+    path: '/admin/product/{productId?}',
+    handler: productsCtrl.removeProduct
+  });
 };

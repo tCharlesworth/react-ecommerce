@@ -21,7 +21,9 @@ class ProductsTableComponent extends React.Component {
     });
   }
   handleDelete(productId) {
-    console.log('need to delete: ', productId);
+    AdminUtils.removeProduct(productId).then(() => {
+      this.loadProducts();
+    });
   }
   render() {
     return (

@@ -24,5 +24,16 @@ module.exports = {
         reply(product);
       }
     });
+  },
+
+  removeProduct(request, reply) {
+    ProductModel.remove({_id: request.params.productId}).exec((err) => {
+      if(err) {
+        console.warn('Could not remove product');
+        reply({msg: 'Could not remove product', code: err.code});
+      } else {
+        reply('OK');
+      }
+    });
   }
 }

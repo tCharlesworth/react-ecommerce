@@ -15,5 +15,8 @@ module.exports = {
     return axios.post(URL+'/admin/products', data).then((response) => {
       return response.data;
     });
+  },
+  removeProduct(productId) {
+    return axios.delete(URL+'/admin/product/'+productId);
   }
 }
