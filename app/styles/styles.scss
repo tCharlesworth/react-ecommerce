@@ -283,11 +283,24 @@ header {
     max-width: 100%;
     max-height: 100%;
   }
-  .carousel-selector {
-    width: 10px;
-    border: thin solid $color-blue;
-    border-radius: 50%;
-    background-color: $color-blue;
+  .selectors {
+    height: 50px;
+
+    .carousel-selector {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      border: thin solid $color-blue;
+      border-radius: 50%;
+      background-color: $color-blue;
+      margin: 3px;
+    }
+    .carousel-selector:hover {
+      cursor: pointer;
+    }
+    .carousel-selector-active {
+      background-color: $color-green;
+    }
   }
 }
 // End Default Size
