@@ -5,6 +5,14 @@ const productsCtrl = require('./controllers/productCtrl.js'),
 module.exports = (server) => {
 
   // Authentication Routes
+  server.route({
+    method: 'POST',
+    path: '/api/login',
+    config: {
+      auth: 'simple',
+      handler: productsCtrl.getProducts
+    }
+  });
   
   // Product Routes
   server.route({

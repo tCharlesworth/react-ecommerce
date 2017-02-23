@@ -10,15 +10,15 @@ module.exports = {
             } else {
                 // Create the user
                 UserModel.create({
-                    email:      request.payload.email,
-                    password:   hash,
-                    newsletter: request.payload.newsletter
+                    email:          request.payload.email,
+                    hashedPassword: hash,
+                    newsletter:     request.payload.newsletter
                 }, (err, user) => {
                     if(err) {
                         console.warn(err);
                         reply({msg: 'Failed to create user', code: err.code}).code(500);
                     } else {
-                        console.log('created new user');
+                        console.log('created new user', user.email);
                         reply(user.serializeUser());
                     }
                 });
