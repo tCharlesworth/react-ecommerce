@@ -7,20 +7,20 @@ const Hapi   = require('hapi');
 
 
 // Load Configurations
-const config = require('./config/config.js');
+require('./config/config.js');
 
 // Create Server
 const server = new Hapi.Server();
 server.connection({ 
-  port: config.port, 
+  port: process.env.SERVER_PORT, 
   host: 'localhost' ,
   routes: {
-    cors: config.ENV != 'PRODUCTION'
+    cors: process.env.ENVIRONMENT != 'PRODUCTION'
   }
 });
 
 // Load the database
-require('./database.js')(server, config);
+require('./database.js')(server);
 
 // Load basic auth
 require('./auth.js')(server, ()=> {

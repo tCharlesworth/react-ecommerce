@@ -10,16 +10,6 @@ module.exports = (server, cb) => {
   const validate = (request, email, pword, cb) => {
     console.log('Validating: ', email, pword);
     let user = authCtrl.validateUser(request, email, pword, cb);
-    // if(!user) {
-    //   console.log('No User Found');
-    //   return cb(null, false);
-    // }
-
-    // // Compare PWORD HERE?
-    // console.log('run bcrypt')
-    // BcryptHelper.compare(pword, user.hashedPassword, (err, isValid) => {
-    //   cb(err, isValid, authCtrl.serializeUser(user) );
-    // });
   }
 
   // Register the auth strategy with the server

@@ -17,6 +17,7 @@
     "bcrypt": "^1.0.2",
     "hapi": "^16.1.0",
     "hapi-auth-basic": "^4.2.0",
+    "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.8.2",
     "node-sass": "^3.10.0",
     "react": "^15.3.2",

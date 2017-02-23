@@ -5,8 +5,9 @@
 
 const Keys = require('./keys.js');
 
-module.exports = {
-  ENV: Keys.ENV || 'DEVELOPMENT',
-  port: Keys.port || 3001,
-  mongoURI: Keys.mongoURI
-};
+process.env.ENVIRONMENT = Keys.ENV || 'DEVELOPMENT';
+process.env.SERVER_PORT = Keys.port || 3001;
+process.env.MONGO_URI   = Keys.mongoURI;
+
+process.env.BCRYPT_SALT_ROUNDS = Keys.bcrypt_salt_rounds || 10;
+process.env.JWT_TOKEN_KEY      = Keys.jwt_secret;
