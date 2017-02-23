@@ -22,18 +22,14 @@ server.connection({
 // Load the database
 require('./database.js')(server);
 
-// Load basic auth
-require('./auth.js')(server, ()=> {
-  //DO THE REST AFTER THE AUTH IS FINISHED
-  // Load routes
-  require('./routes.js')(server);
+// Load routes
+require('./routes.js')(server);
 
-  // Start the Server
-  server.start((err) => {
-    if (err) {
-      throw err;
-    }
-    console.log(`Server running at: ${server.info.uri}`);
-  });
+// Start the Server
+server.start((err) => {
+  if (err) {
+    throw err;
+  }
+  console.log(`Server running at: ${server.info.uri}`);
 });
 

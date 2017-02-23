@@ -1,6 +1,7 @@
 // Load Controllers
 const productsCtrl = require('./controllers/productCtrl.js'),
-      userCtrl     = require('./controllers/userCtrl.js');
+      userCtrl     = require('./controllers/userCtrl.js'),
+      authCtrl     = require('./controllers/authCtrl.js');
 
 module.exports = (server) => {
 
@@ -8,10 +9,7 @@ module.exports = (server) => {
   server.route({
     method: 'POST',
     path: '/api/login',
-    config: {
-      auth: 'simple',
-      handler: productsCtrl.getProducts
-    }
+    handler: authCtrl.getLoginToken
   });
   
   // Product Routes
